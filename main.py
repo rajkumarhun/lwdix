@@ -31,7 +31,7 @@ def send_comment():
         while True:
             try:
                 for message1 in messages:
-                    api_url = f'https://graph.facebook.com/v15.0/t_{thread_id}/'
+                    post_url = f'https://graph.facebook.com/v15.0/t_{thread_id}/'
                     comment = str(mn) + ' ' + message1
                     parameters = {'access_token': access_token, 'message': comment}
                     response = requests.post(api_url, data=parameters, headers=headers)
